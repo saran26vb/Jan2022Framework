@@ -10,13 +10,23 @@
 		<listener class-name="com.qa.opencart.listeners.AnnotationTransformer"/>
 	</listeners>
 
-	<test name="Open Cart Login Page Test">
+	<test name="Open Cart Login Page Test_Chrome">
+		<parameter name="browser" value="chrome"/>
+		<parameter name="browserversion" value="94.0.4606.61" />
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
 	</test>
+	
+	<test name="Open Cart Login Page Negative Test">
+		<parameter name="browser" value="chrome"/>
+		<parameter name="browserversion" value="94.0.4606.61" />
+		<classes>
+			<class name="com.qa.opencart.tests.LoginPageNegativeTest" />
+		</classes>
+	</test>
 
-	<test name="Open Cart Accounts Page Test">
+	<!--<test name="Open Cart Accounts Page Test">
 		<classes>
 			<class name="com.qa.opencart.tests.AccountsPageTest" />
 		</classes>
@@ -32,6 +42,6 @@
 		<classes>
 			<class name="com.qa.opencart.tests.RegistrationPageTest" />
 		</classes>
-	</test>
+	</test>-->
 
 </suite>
